@@ -9,8 +9,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-          <p>App Component</p>
+        <p>App Component</p>
+        <BrowserRouter>
           <Route path="/firstroute" component={FirstRoute}/>
+        </BrowserRouter>
       </div>
     );
   }
