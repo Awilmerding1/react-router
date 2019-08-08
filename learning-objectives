@@ -1,0 +1,10 @@
+Concepts:
+1. Routing
+2. Links
+3. Redirecting
+
+Learning Objectives:
+1. Use BrowserRouter and Route to set up routes
+2. Use Link to navigate from one route to another
+3. Use Redirect to redirect to a different route
+4. Set up nested routes
