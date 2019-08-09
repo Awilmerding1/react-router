@@ -1,0 +1,38 @@
+Part One:
+  Set up our react-router in the index.js file
+
+  We wrap <App/> inside <BrowserRouter> which gives us the ability to
+  use the Route component inside ANY component that is a CHILD of the App
+  component
+
+  Inside App, we set up a <Route /> for our HomePage component
+  Note: We can ONLY use Route because the App component is wrapped inside
+  BrowserRouter
+
+Part Two:
+  Move route to inside App.js file
+
+  We change the index.js file so that it renders just App, unwrapped
+
+  We then set up the BrowserRouter inside the App file and place a <Route/>
+  inside that sets up a route to our FirstRoute component
+
+Part Three:
+  Add Link inside FirstRoute that links to SecondRoute
+
+Part Four:
+  Add Redirect
+    <Redirect from='/' to='/firstroute'/>
+  Add conditional Redirect
+    {this.props.redirect ? <Redirect to='/firstroute'/> : null}
+
+Part Five:
+    <Route path="/secondroute" render={() => <SecondRoute/>}/>
+    <Route path="/secondroute" component={() => <SecondRoute/>}/>
+
+    <Route path="/secondroute" render={(props) => <SecondRoute {...props}/>}/>
+    <Route path="/secondroute" component={(props) => <SecondRoute {...props}/>}/>
+
+
+
+    {this.props.match.params !== '/pets' &&  this.props.match.params !== '/home' ? <Link to='/pets'>Pets</Link> : null}
