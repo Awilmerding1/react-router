@@ -1,33 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
-import {BrowserRouter, Route, Redirect, Link, Switch} from 'react-router-dom'
 
-const PetPage = (props) => {
-
-  const findPet = () => {
-    const urlId = props.match.params.petid
-    const pet = props.pets[urlId-1]
-      console.log(pet)
-    if (pet) {
-      return (
-        <div>
-          {pet.name} - {pet.type}
-        </div>
-      )
-    } else {
-
-      window.alert('cannot find pet')
-      return (
-        <div>
-          <Redirect to='/pets'/>
-        </div>
-      )
-    }
-  }
+const PetPage = ({pet}) => {
 
     return (
       <div>
-        {findPet()}
+        <Link to='/pets'>Pets</Link>
+        {pet && pet.name} - {pet && pet.type}
       </div>
     );
 

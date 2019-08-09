@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Pets from './Pets'
 
 
@@ -11,7 +11,7 @@ class HomePage extends React.Component {
     return (
       <div>
           <p>HomePage</p>
-          <Link to='/pets'>Click to see Pets</Link>
+          <Link to='/pets'> Click to see Pets!</Link>
       </div>
     );
   }
